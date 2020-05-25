@@ -9,8 +9,7 @@ try:
     graph = facebook.GraphAPI(token)
     me = graph.get_object('me')
     print('Account: '+me['name'])
-    #target = input("Enter Target Friend's Name: ")
-    target ='Yell Htet Kyaw'
+    target = input("Enter Target Friend's Name: ")
     friends = requests.get('https://graph.facebook.com/me/friends?access_token=' + token)
     result = json.loads(friends.text)
     # print(result)
